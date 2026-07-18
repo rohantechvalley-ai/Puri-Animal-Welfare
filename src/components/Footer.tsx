@@ -60,13 +60,16 @@ export const Footer: React.FC<FooterProps> = ({ setTab }) => {
           {/* Contact Col */}
           <div className="space-y-3 text-sm" id="footer-contact-col">
             <h3 className="font-display font-semibold text-white text-sm tracking-wider uppercase mb-4">Contact Us</h3>
+            <div className="text-slate-300 font-medium mb-1">
+              Sagar Lokamani Pratihari
+            </div>
             <div className="flex items-start gap-2.5">
               <MapPin className="w-4 h-4 text-brand-emerald mt-0.5" />
-              <span>Swargadwar Beach Road, Puri, Odisha, 752001, India</span>
+              <span>Mochi Sahi, Puri, Odisha, 752001, India</span>
             </div>
             <div className="flex items-center gap-2.5">
               <Phone className="w-4 h-4 text-brand-emerald" />
-              <span>+91 98765 43210</span>
+              <span>+91 90407 79333</span>
             </div>
             <div className="flex items-center gap-2.5">
               <Mail className="w-4 h-4 text-brand-emerald" />

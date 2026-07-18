@@ -202,11 +202,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setCurrentUser(user);
     if (user) {
       localStorage.setItem('puri_user', JSON.stringify(user));
-      if (user.theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+      document.documentElement.classList.remove('dark');
     } else {
       localStorage.removeItem('puri_user');
       document.documentElement.classList.remove('dark');
@@ -307,12 +303,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         const parsedUser = JSON.parse(storedUser);
         setCurrentUser(parsedUser);
         
-        // Document load in dark mode / light mode
-        if (parsedUser.theme === 'dark') {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
+        // Ensure light mode is always used
+        document.documentElement.classList.remove('dark');
       } else {
         // Start as clean guest user
         setCurrentUser(null);

@@ -131,7 +131,7 @@ export const DeveloperDocsView: React.FC = () => {
         <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white">Entity-Relationship Map (ERM)</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { name: 'profiles', desc: 'Saves user contact data, role status, and dark/light UI theme configurations.' },
+            { name: 'profiles', desc: 'Saves user contact data and role status.' },
             { name: 'reports', desc: 'Registers active animal emergencies, locations, severity rating, and dispatches.' },
             { name: 'report_images', desc: 'Maintains zero-to-many attachment URLs per submitted emergency.' },
             { name: 'donations', desc: 'Connects users with secure transparent receipts and contribution logs.' },

@@ -97,7 +97,7 @@ export const ProfileSettingsView: React.FC = () => {
         </div>
         <div>
           <h2 className="font-display font-extrabold text-2xl text-gray-900 dark:text-white">Account Settings</h2>
-          <p className="text-xs text-gray-500">Configure profile, toggle notification nodes, update security credentials, and manage theme options.</p>
+          <p className="text-xs text-gray-500">Configure profile, toggle notification nodes, and update security credentials.</p>
         </div>
       </div>
 
@@ -108,7 +108,6 @@ export const ProfileSettingsView: React.FC = () => {
         <div className="space-y-3" id="settings-navigation-shortcuts">
           {[
             { label: 'Public Profile Information', desc: 'Manage your name, bio, and contact data' },
-            { label: 'App Theme Options', desc: 'Configure dark mode preferences' },
             { label: 'Notification Settings', desc: 'Toggle emergency email or phone dispatches' },
             { label: 'Account Credentials', desc: 'Configure secure password rules' },
             { label: 'Danger Zone', desc: 'Deactivate or wipe credentials permanently' }

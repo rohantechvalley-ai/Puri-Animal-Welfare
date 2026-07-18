@@ -51,7 +51,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({ onAddAuditLog, a
       location: 'Grand Road Secretariat, Puri',
       created_at: '2026-01-10T10:00:00Z',
       notifications_enabled: true,
-      theme: 'dark'
+      theme: 'light'
     },
     {
       id: 'user-default-vet',

@@ -12,8 +12,6 @@ import {
   Bell, 
   User, 
   LogOut, 
-  Sun, 
-  Moon, 
   LayoutDashboard, 
   Settings, 
   ShieldAlert, 
@@ -108,11 +106,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setTab }) => {
     setMobileMenuOpen(false);
   };
 
-  const toggleTheme = () => {
-    if (!currentUser) return;
-    const nextTheme = currentUser.theme === 'light' ? 'dark' : 'light';
-    updateProfile({ theme: nextTheme });
-  };
+
 
   return (
     <header className="sticky top-0 z-40 w-full" id="global-header">
@@ -173,17 +167,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setTab }) => {
 
           {/* Actions Bar */}
           <div className="hidden md:flex items-center gap-4" id="desktop-actions">
-            {/* Theme Toggle */}
-            {currentUser && (
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-xl text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-slate-800/50 transition-colors"
-                title={`Switch to ${currentUser.theme === 'light' ? 'Dark' : 'Light'} Mode`}
-                id="theme-toggle-btn"
-              >
-                {currentUser.theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-              </button>
-            )}
+
 
             {/* Notifications Bell */}
             <div className="relative" id="notifications-dropdown-root">
@@ -349,15 +333,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setTab }) => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-3" id="mobile-actions">
-            {currentUser && (
-              <button
-                onClick={toggleTheme}
-                className="p-1.5 rounded-lg text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white"
-                id="theme-toggle-btn-mobile"
-              >
-                {currentUser.theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-              </button>
-            )}
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-slate-800/50 transition-colors"
