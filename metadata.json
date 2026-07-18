@@ -1,0 +1,6 @@
+{
+  "name": "Puri Animal & Nature Support",
+  "description": "An independent community-driven initiative started by a local resident to help street dogs, temple cows, and keep beaches clean in Puri, Odisha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
